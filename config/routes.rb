@@ -1,4 +1,7 @@
 SklepMobilny::Application.routes.draw do
+  
+  root :to => "Shop#index"
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
