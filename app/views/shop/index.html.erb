@@ -9,8 +9,6 @@
 <% @products.each do |product| %>
   <tr>
     <td><%= product.nazwa %></td>
-    <td><%= product.opis %></td>
-    <td><%= product.cena %></td>
   	<td><%= link_to "Więcej", product %></td>
   </tr>
 <% end %>
