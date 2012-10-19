@@ -1,0 +1,5 @@
+<h2>Kategoria <%= @category.nazwa %></h2>
+<% @category.products.each do |product| %>
+<a href="/product/<%= product.id %>"><%= product.nazwa %></a>
+<% end %>
+<p><%= link_to "Wróć", root_path %></p>

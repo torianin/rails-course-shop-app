@@ -1,17 +1,9 @@
-<html>
-<head>
-	<title>Sklep Programisty Mobilnego</title>
-</head>
-<body>
-<h1>Sklep Programisty Mobilnego</h1>
-<b>Cennik</b>
-<table>
+<h1>Sklep programisty mobilnego</h1>
+<h2>Produkty</h2>
 <% @products.each do |product| %>
-  <tr>
-    <td><%= product.nazwa %></td>
-  	<td><%= link_to "Więcej", product %></td>
-  </tr>
+<a href="/product/<%= product.id %>"><%= product.nazwa %></a>
 <% end %>
-</table>
-</body>
-</html>
+<h2>Kategorie</h2>
+<% @categories.each do |category| %>
+<a href="/category/<%= category.id %>"><%= category.nazwa %></a>
+<% end %>

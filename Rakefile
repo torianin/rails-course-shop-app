@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-SklepMobilny::Application.load_tasks
+MobileShop::Application.load_tasks

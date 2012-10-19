@@ -15,7 +15,7 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: sklep_mobilny_development
+  database: mobile_shop_development
   pool: 5
   username: robert
   password: 
@@ -40,7 +40,7 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: sklep_mobilny_test
+  database: mobile_shop_test
   pool: 5
   username: robert
   password: 
@@ -51,7 +51,7 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: sklep_mobilny_production
+  database: mobile_shop_production
   pool: 5
   username: robert
   password: 

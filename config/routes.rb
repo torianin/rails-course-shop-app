@@ -1,7 +1,8 @@
-SklepMobilny::Application.routes.draw do
-  
-  root :to => "Shop#index"
-  resources :products
+MobileShop::Application.routes.draw do
+
+  root :to => "shop#index"
+  match 'product/:id' => "shop#product"
+  match 'category/:id' => "shop#category"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
