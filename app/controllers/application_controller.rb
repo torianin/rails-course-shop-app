@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
   		end
 
   		@current_user = cookies[:current_user]
-
+      
   	end
 
 end
