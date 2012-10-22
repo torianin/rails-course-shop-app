@@ -1,1 +1,5 @@
-Hello to admin panel
+<h2>Zakupy</h2>
+<% @orders.each do |order| %>
+<b>Id zakupu: </b><%= order.id %><br>
+<b>Id kupującego: </b><%= order.buyer_id %><br>
+<% end %>
