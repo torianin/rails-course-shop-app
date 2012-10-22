@@ -1,6 +1,4 @@
 MobileShop::Application.routes.draw do
-  devise_for :users
-
  namespace :admin do
     root :to => 'orders#index'
     devise_for :users
@@ -11,6 +9,7 @@ MobileShop::Application.routes.draw do
   match 'add/:id' => 'orders#create'
   match 'card/' => 'card#index'
 
+  resources :buyers
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

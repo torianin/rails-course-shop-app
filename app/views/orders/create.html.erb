@@ -1,7 +1,7 @@
-Id użytkownika <%=@current_user%> <br>
+Id użytkownika <%=@current_buyer.id%> <br>
 Zamawiany przedmiot <%=@buy_item.opis%>
 <h2>Podaj</h2> 
-<%= form_for @current_user do |f| %>
+<%= form_for @current_buyer do |f| %>
   <%= f.label "Imie" %>:
   <%= f.text_field :first_name %><br />
 
@@ -9,5 +9,5 @@ Zamawiany przedmiot <%=@buy_item.opis%>
   <%= f.text_field :last_name %><br />
 
 
-  <%= f.submit "Potwierdź" %>
+  <%= f.submit "Potwierdz tozsamosc" %>
 <% end %>
