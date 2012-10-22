@@ -3,4 +3,6 @@ Nazwa: <%= @product.nazwa %><br>
 Cena: <%= @product.cena%><br>
 Numer kategorii: <%= @product.category_id %><br>
 Kategoria:  <%= @product.category.nazwa %>
+
+<%= button_to("Do koszyka", {:controller => "orders", :action => "create", :id => @product.id})%>
 <p><%= link_to "Wróć", root_path %></p>

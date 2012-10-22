@@ -8,6 +8,8 @@ MobileShop::Application.routes.draw do
   root :to => "shop#index"
   match 'product/:id' => "shop#product"
   match 'category/:id' => "shop#category"
+  match 'add/:id' => 'orders#create'
+  match 'card/' => 'card#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

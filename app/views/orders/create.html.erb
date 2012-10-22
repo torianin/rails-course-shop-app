@@ -1,0 +1,13 @@
+Id użytkownika <%=@current_user%> <br>
+Zamawiany przedmiot <%=@buy_item.opis%>
+<h2>Podaj</h2> 
+<%= form_for @current_user do |f| %>
+  <%= f.label "Imie" %>:
+  <%= f.text_field :first_name %><br />
+
+  <%= f.label "Nazwisko" %>:
+  <%= f.text_field :last_name %><br />
+
+
+  <%= f.submit "Potwierdź" %>
+<% end %>
