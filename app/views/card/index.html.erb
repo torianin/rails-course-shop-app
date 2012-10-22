@@ -6,8 +6,10 @@ Nazwisko użytkownika <%=@current_buyer.last_name%> <br>
 <% @current_buyer.orders.each do |orders| %>
 Numer zamówienia = <%= orders.id %><br>
 <% orders.order_items.each do |ordersitems| %>
-		Id zamówionego produktu = <%= ordersitems.product_id %><br>
-		<% @description = Product.find(ordersitems.product_id) %>
+		Ile sztuk= <%= ordersitems.quantity %><br>
+		<% @id_product = Product.find(ordersitems.product_id) %>
+		<% @description = Product.find(@id_product.id) %>
+		Id zamawianego przedmiotu <%= @id_product.id %><br>
 		Opis zamówienia <%= @description.opis %>
 	<% end %>
 	<hr>

@@ -8,7 +8,7 @@ class OrdersController < ApplicationController
 		@o.save 		
 		@oi = @o.order_items.new
 		@oi.order_id = @o.id
-		@oi.product_id = @buy_item
+		@oi.product_id = @buy_item.id
 		@oi.quantity = 1
 		@oi.save
 	end
