@@ -1,7 +1,10 @@
 MobileShop::Application.routes.draw do
-  namespace :admin do 
-    root :to => "orders#index"
-  end 
+  devise_for :users
+
+ namespace :admin do
+    root :to => 'orders#index'
+    devise_for :users
+  end
   root :to => "shop#index"
   match 'product/:id' => "shop#product"
   match 'category/:id' => "shop#category"
