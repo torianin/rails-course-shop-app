@@ -2,4 +2,9 @@
 <% @orders.each do |order| %>
 <b>Id zakupu: </b><%= order.id %><br>
 <b>Id kupującego: </b><%= order.buyer_id %><br>
+<% order.order_items.each do |ordersitems| %>
+	Id produktu: <%= ordersitems.product_id %><br>
+	<% @description = Product.find(ordersitems.product_id) %>
+	Opis przedmiotu <%= @description.opis %><% end %>
+<hr>
 <% end %>
