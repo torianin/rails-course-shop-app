@@ -12,4 +12,5 @@ class OrdersController < ApplicationController
 		@oi.quantity = 1
 		@oi.save
 	end
+
 end

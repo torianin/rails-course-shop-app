@@ -1,0 +1,11 @@
+<h2>Edytuj produkt</h2> 
+<%= form_for @product do |f| %>
+  <%= f.label :nazwa %>:
+  <%= f.text_field :nazwa %><br />
+
+  <%= f.label :opis %>:
+  <%= f.text_field :opis %><br />
+
+
+  <%= f.submit "Zatwierdz zmiany" %>
+<% end %>

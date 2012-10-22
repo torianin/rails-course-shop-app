@@ -2,14 +2,19 @@ MobileShop::Application.routes.draw do
  namespace :admin do
     root :to => 'orders#index'
     devise_for :users
+    match 'edit/' => 'orders#edit'
+    match 'edit/product/:id' => 'orders#productedit'
+    
   end
   root :to => "shop#index"
   match 'product/:id' => "shop#product"
   match 'category/:id' => "shop#category"
   match 'add/:id' => 'orders#create'
   match 'card/' => 'card#index'
+  
 
   resources :buyers
+  resources :products
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
