@@ -2,4 +2,11 @@
 Id użytkownika <%=@current_buyer.id%> <br>
 Imie użytkownika <%=@current_buyer.first_name%> <br>
 Nazwisko użytkownika <%=@current_buyer.last_name%> <br>
-Id zamówionych przedmiotów <%=@current_buyer.orders%> <br>
+
+<% @current_buyer.orders.each do |orders| %>
+Order Id = <%= orders.id %></a><br>
+<% orders.order_items.each do |ordersitems| %>
+		Order Product Id = <%= ordersitems.product_id %></a><br>
+	<% end %>
+	<hr>
+<% end %>
