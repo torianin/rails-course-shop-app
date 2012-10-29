@@ -1,8 +1,8 @@
 class ProductsController < ApplicationController
-	def index
- 		@q = Product.search(params[:q])
- 		@products = @q.result
-	end
+	# def index
+ # 		@q = Product.search(params[:q])
+ # 		@products = @q.result
+	# end
 	def update
 		@current_product = Product.find(params[:id])
 		@new_product_information = params[:product]
