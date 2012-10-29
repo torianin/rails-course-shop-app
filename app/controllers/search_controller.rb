@@ -1,6 +1,6 @@
-class SearchController < ActionController::Base
+class SearchController < ApplicationController
 	def index
  		@q = Product.search(params[:q])
- 		@finded = @q.result
+ 		@products = @q.result
 	end
 end

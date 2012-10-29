@@ -1,7 +1,7 @@
-class ProductsController < ActionController::Base
+class ProductsController < ApplicationController
 	def index
  		@q = Product.search(params[:q])
- 		@finded = @q.result
+ 		@products = @q.result
 	end
 	def update
 		@current_product = Product.find(params[:id])
