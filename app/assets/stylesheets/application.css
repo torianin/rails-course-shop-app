@@ -57,11 +57,20 @@ header {
 	background-color: #888888;
 }
 
-header a {
+#card {
 	font-size: 20px;
 	position: fixed;
 	top:10px;
 	right:10%;
+	text-transform: uppercase;
+	color: #000;
+}
+
+#search {
+	font-size: 20px;
+	position: fixed;
+	top:10px;
+	right:20%;
 	text-transform: uppercase;
 	color: #000;
 }

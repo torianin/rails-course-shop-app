@@ -4,14 +4,13 @@ MobileShop::Application.routes.draw do
     devise_for :users
     match 'edit/' => 'orders#edit'
     match 'edit/product/:id' => 'orders#productedit', as: :productedit
-    
   end
   root :to => "shop#index"
   match 'product/:id' => "shop#product"
   match 'category/:id' => "shop#category"
   match 'add/:id' => 'orders#create'
   match 'card/' => 'card#index'
-  
+  match 'search/' => 'search#index' 
 
   resources :buyers
   resources :products

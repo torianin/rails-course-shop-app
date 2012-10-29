@@ -1,0 +1,13 @@
+<%= search_form_for @q do |f| %>
+  <div class="field">
+    <%= f.label :nazwa_cont, "Nazwa zawiera" %>
+    <%= f.text_field :nazwa_cont %>
+  </div>
+  <div class="field">
+    <%= f.label :cena_gteq, "Cenna pomiędzy" %>
+    <%= f.text_field :cena_gteq %>
+    <%= f.label :cena_lteq, "i" %>
+    <%= f.text_field :cena_lteq %>   <%="max 999" %>
+  </div>
+  <div class="actions"><%= f.submit "Szukaj" %></div>
+<% end %>

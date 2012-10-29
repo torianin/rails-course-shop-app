@@ -1,0 +1,4 @@
+<h2>Produkty</h2>
+<% @products.each do |product| %>
+<a href="/product/<%= product.id %>"><%= product.nazwa %></a><br>
+<% end %>
