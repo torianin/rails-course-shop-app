@@ -3,7 +3,7 @@ MobileShop::Application.routes.draw do
     root :to => 'orders#index'
     devise_for :users
     match 'edit/' => 'orders#edit'
-    match 'edit/product/:id' => 'orders#productedit'
+    match 'edit/product/:id' => 'orders#productedit', as: :productedit
     
   end
   root :to => "shop#index"
