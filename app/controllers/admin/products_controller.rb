@@ -1,4 +1,4 @@
-class ProductsController < Devise::SessionsController
+class Admin::ProductsController < Devise::SessionsController
 	def update
 		@current_product = Product.find(params[:id])
 		@new_product_information = params[:product]
