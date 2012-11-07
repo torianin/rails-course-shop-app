@@ -11,6 +11,7 @@ MobileShop::Application.routes.draw do
   match 'add/:id' => 'orders#create'
   match 'card/' => 'card#index'
   match 'search/' => 'search#index' 
+  match 'spa/' => 'spa#index' 
 
   resources :buyers
   resources :products
