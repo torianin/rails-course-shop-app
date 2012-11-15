@@ -1,0 +1,1 @@
+[<% @category.each do |category| %>{"id":"<%= category.id %>", "name":"<%= category.nazwa %>"},<% end %>{}]

@@ -1,17 +1,22 @@
-class Main                                                                                                  
-	constructor: ->       
-		source   = $("#index").html()
-		template = Handlebars.compile(source)                                                                  
-		name = "Robert Ignasiak"
-		context = {name: name}  
-		html = template(context)
-		$('.index').append(html)
-		# $.ajax({
-		#   url: "index.json",
-		#   cache: false ,
-		#   dataType: "json"
-		# }).done(function( html ) {
-		#   $("#results").append(html);
-		# });
+class Main
+    
+    createCategory: ->
+    callback = (data) ->
+        source   = $("#categories_list").html()
+        template = Handlebars.compile(source)
+        html = template({categories: data});
+        console.log(html)
+        $('#categories').html(html);
+
+    $.get('/show.json', {} ,callback, 'json')
+
+    app = Sammy ->
+        @get '#/', ->
+
+        @get '#/category/:id', ->
+
+        @get '#/product/:id', ->
+
+    app.run '#/'
 
 $(-> new Main())

@@ -14,4 +14,5 @@
 //= require jquery_ujs
 //= require_tree .
 //= require handlebars-1.0.rc.1.js
-//= require sammy.js
+//= require Sammy.js
+//= handlebars-helpers.js
