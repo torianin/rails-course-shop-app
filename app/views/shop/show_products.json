@@ -1,0 +1,1 @@
+[<% @products.each do |products| %>{"id":"<%= products.id %>", "name":"<%= products.nazwa %>"},<% end %>{}]

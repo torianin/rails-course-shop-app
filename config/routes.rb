@@ -12,8 +12,9 @@ MobileShop::Application.routes.draw do
   match 'card/' => 'card#index'
   match 'search/' => 'search#index' 
   match 'spa/' => 'spa#index' 
-  match 'show' => 'shop#show'
-  
+  match 'show_categories' => 'shop#show_categories'
+  match 'show_products' => 'shop#show_products'
+
   resources :buyers
   resources :products
   # The priority is based upon order of creation:
