@@ -20,4 +20,8 @@ class ShopController < ApplicationController
 	def show_products
 		@products = Product.all
 	end
+
+	def show_user
+		@current_buyer = Buyer.find(@current_user)
+	end
 end

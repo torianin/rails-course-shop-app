@@ -14,6 +14,7 @@ MobileShop::Application.routes.draw do
   match 'spa/' => 'spa#index' 
   match 'show_categories' => 'shop#show_categories'
   match 'show_products' => 'shop#show_products'
+  match 'show_user' => 'shop#show_user'
 
   resources :buyers
   resources :products
