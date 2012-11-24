@@ -1,6 +1,5 @@
 class Main
     
-    createAll: ->
     callback_categories = (data) ->
         source   = $("#categories_list").html()
         template = Handlebars.compile(source)
@@ -19,13 +18,6 @@ class Main
 
     $.get('/show_products.json', {} ,callback_products, 'json')
 
-    app = Sammy ->
-        @get '#/', ->
-
-        @get '#/category/:id', ->
-
-        @get '#/product/:id', ->
-
-    app.run '#/'
+    $('#categories_button').click -> alert "you"
 
 $(-> new Main())
