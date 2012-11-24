@@ -3,7 +3,7 @@ class Main
     callback_category_info: (categories_info_data) ->
             source   = $("#categories_info").html()
             template = Handlebars.compile(source)
-            html = template({categories_list: categories_info_data});
+            html = template({categories_list: categories_info_data})
             $('#product_info').html(html);
 
     callback_categories: (categories_data) ->
@@ -22,10 +22,20 @@ class Main
     callback_products: (data) ->
         source   = $("#products_list").html()
         template = Handlebars.compile(source)
-        html = template({products: data});
-        $('#products').html(html);
+        html = template({products: data})
+        $('#products').html(html)
 
     $.get('/show_products.json', {} , Main.prototype.callback_products, 'json')
+
+    callback_user: (data) ->
+        console.log(data)
+        source   = $("#user_info").html()
+        template = Handlebars.compile(source)
+        html = template(data)
+        console.log(html)
+        $('#user_id').html("<h2>Id użytkownika:" + html + "</h2>")
+
+    request = $.get('/show_user.json', {} , Main.prototype.callback_user, 'json')
 
 
 

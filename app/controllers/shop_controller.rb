@@ -28,4 +28,9 @@ class ShopController < ApplicationController
 	def show_product
 		@product = Product.find(params[:id])
 	end
+
+	def show_user
+		@current_buyer = Buyer.find(@current_user)
+	end
+
 end
