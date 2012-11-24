@@ -1,6 +1,6 @@
 Handlebars.registerHelper('categories', function(items, options) {
     out = "";
-    out = "<button id=\"categories_button\">Kategorie</button><br>"
+    out = "<h2>Kategorie</h2>"
     for(var i=0, l=items.length - 1; i<l; i++) {
         out = out + "<a id="+(i+1)+" href='#/category/" + items[i].id + "'>" + items[i].name + "</a></br>";
     }
@@ -10,7 +10,7 @@ Handlebars.registerHelper('categories', function(items, options) {
 
 Handlebars.registerHelper('products', function(items, options) {
     out = "";
-    out = "<br><button id=\"products\">Produkty</button><br>"
+    out = "<h2>Produkty</h2>"
     for(var i=0, l=items.length - 1; i<l; i++) {
         out = out + "<a id="+i+" href='#/products/" + items[i].id + "'>" + items[i].name + "</a></br>";
     }
@@ -20,9 +20,9 @@ Handlebars.registerHelper('products', function(items, options) {
 
 Handlebars.registerHelper('categories_list', function(items, options) {
     out = "";
-    console.log(items)
+    out = "<h2>" + items[0].kategoria +"</h2>"
     for(var i=0, l=items.length - 1; i<l; i++) {
-        out = out + "<p>" + items[i].kategoria + "</p></br>";
+        out = out + "<p>" + items[i].products + "</p>";
     }
 
     return out;

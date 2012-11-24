@@ -2,6 +2,17 @@
 <head>
 <title>SPA</title>
 <%= javascript_include_tag "application" %>
+<style type="text/css">
+#mainpage {
+	width: 200px;
+}
+#product_info{
+	position: fixed;
+	top:0px;
+	left: 200px;
+
+}
+</style>
 <script id="categories_list" type="text/x-handlebars-template">
 	{{#categories categories}} {{id}} {{name}} {{/categories}}
 </script>
@@ -13,9 +24,11 @@
 </script>
 </head>
 <body>
-<div id="user"></div>
-<div id="categories"></div>
-<div id="products"></div>
+<div id="mainpage">
+	<div id="user"></div>
+	<div id="categories"></div>
+	<div id="products"></div>
+</div>
 <div id="product_info"></div>
 </body>
 </html>
