@@ -20,7 +20,7 @@ Handlebars.registerHelper('products', function(items, options) {
 
 Handlebars.registerHelper('categories_list', function(items, options) {
     out = "";
-    out = "<h2>" + items[0].kategoria +"</h2>"
+    out = "<h2> Produky w kategorii </h2>"
     for(var i=0, l=items.length - 1; i<l; i++) {
         out = out + "<p>" + items[i].products + "</p>";
     }
