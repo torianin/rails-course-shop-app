@@ -1,0 +1,1 @@
+[<% @category.products.each do |product| %>{"kategoria":<%= @category.nazwa %>, "products":"<%= product.nazwa %>"},<% end %>{}]

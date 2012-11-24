@@ -21,6 +21,10 @@ class ShopController < ApplicationController
 		@products = Product.all
 	end
 
+	def show_category
+		@category = Category.find(params[:id])
+	end
+
 	def show_product
 		@product = Product.find(params[:id])
 	end

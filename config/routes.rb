@@ -16,6 +16,7 @@ MobileShop::Application.routes.draw do
   match 'show_products' => 'shop#show_products'
   match 'show_user' => 'shop#show_user'
   match 'show_product/:id' => 'shop#show_product'
+  match 'show_category/:id' => 'shop#show_category'
 
   resources :buyers
   resources :products

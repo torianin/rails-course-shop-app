@@ -2,17 +2,20 @@
 <head>
 <title>SPA</title>
 <%= javascript_include_tag "application" %>
-<script src="javascripts/Sammy.js" type="text/javascript"></script>
 <script id="categories_list" type="text/x-handlebars-template">
 	{{#categories categories}} {{id}} {{name}} {{/categories}}
 </script>
 <script id="products_list" type="text/x-handlebars-template">
 	{{#products products}} {{id}} {{name}} {{/products}}
 </script>
+<script id="categories_info" type="text/x-handlebars-template">
+	{{#categories_list categories_list}} {{products}} {{/categories_list}}
+</script>
 </head>
 <body>
 <div id="user"></div>
 <div id="categories"></div>
 <div id="products"></div>
+<div id="product_info"></div>
 </body>
 </html>
